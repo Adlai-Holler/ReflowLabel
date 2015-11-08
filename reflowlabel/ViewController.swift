@@ -24,11 +24,10 @@ class ViewController: UIViewController {
     
     lazy var reflowLabel: ReflowLabel = {
         let l = ReflowLabel(frame: CGRect(x: 0, y: 150, width: 320, height: 200))
-        l.label.text = "This text will reflow as the label shrinks, I'm sure of it. If not, then it'll be back to the drawing board I guess – but hey, considering how fast this was built, I still have reason to be proud."
+        l.text = "This text will reflow as the label shrinks, I'm sure of it. If not, then it'll be back to the drawing board I guess – but hey, considering how fast this was built, I still have reason to be proud."
         l.layer.borderColor = UIColor.blackColor().CGColor
         l.layer.borderWidth = 1
         l.layer.cornerRadius = 3
-        l._recreateFrags()
         return l
     }()
                             

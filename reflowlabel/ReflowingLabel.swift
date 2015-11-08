@@ -15,26 +15,27 @@ class ReflowLabel : UIView {
     let textStorage = NSTextStorage()
     let layoutManager = NSLayoutManager()
     let textContainer = NSTextContainer()
-    let label: UILabel
     var wordViews: [ReflowFragmentView] = []
-    var textFragsCameFrom: NSAttributedString?
+
+    // FIXME: Use NSAttributedString instead.
+    var text = "" {
+        didSet {
+            if text != oldValue {
+                _recreateFrags()
+            }
+        }
+    }
     
-    private lazy var displayLink: CADisplayLink = { [unowned self] in
-        return CADisplayLink(target: self, selector: "displayLinkFired:")
-    }()
+    /// Hate implicitly unwrapped optionals but we need to pass self into the initializer.
+    private var displayLink: CADisplayLink!
     
     override init(frame: CGRect)  {
-        label = UILabel()
-
         super.init(frame: frame)
+        displayLink = CADisplayLink(target: self, selector: "displayLinkFired:")
         textStorage.addLayoutManager(layoutManager)
         textContainer.lineFragmentPadding = 0.0
         layoutManager.addTextContainer(textContainer)
-        label.frame = bounds
-        label.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        label.hidden = true
         clipsToBounds = true
-        addSubview(label)
         displayLink.frameInterval = 5
         displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
     }
@@ -43,7 +44,7 @@ class ReflowLabel : UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func displayLinkFired(displayLink: CADisplayLink) {
+    @objc private func displayLinkFired(displayLink: CADisplayLink) {
         let presLayer = layer.presentationLayer() as! CALayer
         updateFragPositions(CGRectIntegral(presLayer.bounds), animated: true)
     }
@@ -52,20 +53,19 @@ class ReflowLabel : UIView {
     
     // should call automatically – observe label.text somehow
     func _recreateFrags() {
-        textStorage.setAttributedString(NSAttributedString(string: label.text!, attributes: [ NSFontAttributeName: label.font]))
+        let font = UIFont.systemFontOfSize(17)
+        let attributedString = NSAttributedString(string: text, attributes: [NSFontAttributeName: font])
+        textStorage.setAttributedString(attributedString)
         for view in wordViews {
             view.removeFromSuperview()
         }
         wordViews.removeAll(keepCapacity: true)
-        let attributedStr = label.attributedText!
-        let str2 = label.text!
-        let range = str2.nsRangeFromRange(str2.startIndex..<str2.endIndex)
-        let bounds = self.bounds
-        ReflowLabel.tokenRegex.enumerateMatchesInString(str2, options: [], range: range) { result, _, _ in
+        let range = text.nsRangeFromRange(text.startIndex..<text.endIndex)
+        ReflowLabel.tokenRegex.enumerateMatchesInString(text, options: [], range: range) { result, _, _ in
             guard let result = result else { return }
             let nsRange = result.range
-            let attributedText = attributedStr.attributedSubstringFromRange(nsRange)
-            var frame = self.boundingRect(nsRange, bounds: bounds)
+            let attributedText = attributedString.attributedSubstringFromRange(nsRange)
+            var frame = self.boundingRect(nsRange, bounds: self.bounds)
             
             frame = self.fragFrameFromGlyphsFrame(frame)
             let label = ReflowFragmentView(frame: frame)
@@ -74,8 +74,6 @@ class ReflowLabel : UIView {
             self.addSubview(label)
             self.wordViews.append(label)
         }
-
-        textFragsCameFrom = attributedStr
     }
     
     private func fragFrameFromGlyphsFrame(glyphsFrame: CGRect) -> CGRect {
