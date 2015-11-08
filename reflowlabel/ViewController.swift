@@ -8,10 +8,10 @@
 
 import UIKit
 let maxIndentationLevel = 5
-let indentationWidth: CGFloat = 25.0
+let indentationWidth: CGFloat = 25
 class ViewController: UIViewController {
     @IBOutlet var levelLabel: UILabel!
-    var indentationLevel:Int = 0 {
+    var indentationLevel = 0 {
         didSet {
             let indentation = indentationWidth * CGFloat(indentationLevel);
             UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.95, initialSpringVelocity: 0.3, options: .BeginFromCurrentState, animations: {
