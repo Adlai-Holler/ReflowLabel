@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4024334C1971B3680025C6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024334B1971B3680025C6A4 /* AppDelegate.swift */; };
+		4024334E1971B3680025C6A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024334D1971B3680025C6A4 /* ViewController.swift */; };
+		402433511971B3680025C6A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4024334F1971B3680025C6A4 /* Main.storyboard */; };
+		402433531971B3680025C6A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 402433521971B3680025C6A4 /* Images.xcassets */; };
+		4024335F1971B3680025C6A4 /* ReflowLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024335E1971B3680025C6A4 /* ReflowLabelTests.swift */; };
+		402433691971B3960025C6A4 /* ReflowingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402433681971B3960025C6A4 /* ReflowingLabel.swift */; };
+		404426091971C39000A442F7 /* ReflowFragmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404426081971C39000A442F7 /* ReflowFragmentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		402433591971B3680025C6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4024333E1971B3680025C6A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 402433451971B3680025C6A4;
+			remoteInfo = ReflowLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		402433461971B3680025C6A4 /* ReflowLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReflowLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4024334A1971B3680025C6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4024334B1971B3680025C6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4024334D1971B3680025C6A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		402433501971B3680025C6A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		402433521971B3680025C6A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		402433581971B3680025C6A4 /* ReflowLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReflowLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4024335D1971B3680025C6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4024335E1971B3680025C6A4 /* ReflowLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflowLabelTests.swift; sourceTree = "<group>"; };
+		402433681971B3960025C6A4 /* ReflowingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReflowingLabel.swift; sourceTree = "<group>"; };
+		404426081971C39000A442F7 /* ReflowFragmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReflowFragmentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		402433431971B3680025C6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		402433551971B3680025C6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4024333D1971B3680025C6A4 = {
+			isa = PBXGroup;
+			children = (
+				402433481971B3680025C6A4 /* ReflowLabel */,
+				4024335B1971B3680025C6A4 /* ReflowLabelTests */,
+				402433471971B3680025C6A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		402433471971B3680025C6A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				402433461971B3680025C6A4 /* ReflowLabel.app */,
+				402433581971B3680025C6A4 /* ReflowLabelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		402433481971B3680025C6A4 /* ReflowLabel */ = {
+			isa = PBXGroup;
+			children = (
+				4024334B1971B3680025C6A4 /* AppDelegate.swift */,
+				4024334D1971B3680025C6A4 /* ViewController.swift */,
+				402433681971B3960025C6A4 /* ReflowingLabel.swift */,
+				404426081971C39000A442F7 /* ReflowFragmentView.swift */,
+				4024334F1971B3680025C6A4 /* Main.storyboard */,
+				402433521971B3680025C6A4 /* Images.xcassets */,
+				402433491971B3680025C6A4 /* Supporting Files */,
+			);
+			path = ReflowLabel;
+			sourceTree = "<group>";
+		};
+		402433491971B3680025C6A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4024334A1971B3680025C6A4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4024335B1971B3680025C6A4 /* ReflowLabelTests */ = {
+			isa = PBXGroup;
+			children = (
+				4024335E1971B3680025C6A4 /* ReflowLabelTests.swift */,
+				4024335C1971B3680025C6A4 /* Supporting Files */,
+			);
+			path = ReflowLabelTests;
+			sourceTree = "<group>";
+		};
+		4024335C1971B3680025C6A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4024335D1971B3680025C6A4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		402433451971B3680025C6A4 /* ReflowLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 402433621971B3680025C6A4 /* Build configuration list for PBXNativeTarget "ReflowLabel" */;
+			buildPhases = (
+				402433421971B3680025C6A4 /* Sources */,
+				402433431971B3680025C6A4 /* Frameworks */,
+				402433441971B3680025C6A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReflowLabel;
+			productName = ReflowLabel;
+			productReference = 402433461971B3680025C6A4 /* ReflowLabel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		402433571971B3680025C6A4 /* ReflowLabelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 402433651971B3680025C6A4 /* Build configuration list for PBXNativeTarget "ReflowLabelTests" */;
+			buildPhases = (
+				402433541971B3680025C6A4 /* Sources */,
+				402433551971B3680025C6A4 /* Frameworks */,
+				402433561971B3680025C6A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4024335A1971B3680025C6A4 /* PBXTargetDependency */,
+			);
+			name = ReflowLabelTests;
+			productName = ReflowLabelTests;
+			productReference = 402433581971B3680025C6A4 /* ReflowLabelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4024333E1971B3680025C6A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Adlai Holler";
+				TargetAttributes = {
+					402433451971B3680025C6A4 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					402433571971B3680025C6A4 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 402433451971B3680025C6A4;
+					};
+				};
+			};
+			buildConfigurationList = 402433411971B3680025C6A4 /* Build configuration list for PBXProject "reflowlabel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4024333D1971B3680025C6A4;
+			productRefGroup = 402433471971B3680025C6A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				402433451971B3680025C6A4 /* ReflowLabel */,
+				402433571971B3680025C6A4 /* ReflowLabelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		402433441971B3680025C6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				402433511971B3680025C6A4 /* Main.storyboard in Resources */,
+				402433531971B3680025C6A4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		402433561971B3680025C6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		402433421971B3680025C6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4024334E1971B3680025C6A4 /* ViewController.swift in Sources */,
+				404426091971C39000A442F7 /* ReflowFragmentView.swift in Sources */,
+				4024334C1971B3680025C6A4 /* AppDelegate.swift in Sources */,
+				402433691971B3960025C6A4 /* ReflowingLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		402433541971B3680025C6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4024335F1971B3680025C6A4 /* ReflowLabelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4024335A1971B3680025C6A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 402433451971B3680025C6A4 /* ReflowLabel */;
+			targetProxy = 402433591971B3680025C6A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4024334F1971B3680025C6A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				402433501971B3680025C6A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		402433601971B3680025C6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		402433611971B3680025C6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		402433631971B3680025C6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ReflowLabel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		402433641971B3680025C6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ReflowLabel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		402433661971B3680025C6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ReflowLabel.app/ReflowLabel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ReflowLabelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		402433671971B3680025C6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ReflowLabel.app/ReflowLabel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ReflowLabelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		402433411971B3680025C6A4 /* Build configuration list for PBXProject "reflowlabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				402433601971B3680025C6A4 /* Debug */,
+				402433611971B3680025C6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		402433621971B3680025C6A4 /* Build configuration list for PBXNativeTarget "ReflowLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				402433631971B3680025C6A4 /* Debug */,
+				402433641971B3680025C6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		402433651971B3680025C6A4 /* Build configuration list for PBXNativeTarget "ReflowLabelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				402433661971B3680025C6A4 /* Debug */,
+				402433671971B3680025C6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4024333E1971B3680025C6A4 /* Project object */;
+}
