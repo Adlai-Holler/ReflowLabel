@@ -15,11 +15,9 @@ class ViewController: UIViewController {
         didSet {
             let indentation = indentationWidth * CGFloat(indentationLevel);
             UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.95, initialSpringVelocity: 0.3, options: .BeginFromCurrentState, animations: {
-                let frame = CGRect(x: indentation, y: 150, width: self.view.bounds.size.width - indentation, height: 200)
+                let frame = CGRect(x: indentation, y: 150, width: self.view.bounds.width - indentation, height: 200)
                 self.reflowLabel.frame = frame
-            }, completion: { finished in
-                
-            })
+            }, completion: nil)
             levelLabel.text = "Level: \(indentationLevel)"
         }
     }

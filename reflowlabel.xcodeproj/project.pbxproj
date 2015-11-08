@@ -14,6 +14,7 @@
 		4024335F1971B3680025C6A4 /* ReflowLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024335E1971B3680025C6A4 /* ReflowLabelTests.swift */; };
 		402433691971B3960025C6A4 /* ReflowingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402433681971B3960025C6A4 /* ReflowingLabel.swift */; };
 		404426091971C39000A442F7 /* ReflowFragmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404426081971C39000A442F7 /* ReflowFragmentView.swift */; };
+		CC96AB701BEEEE9500E0663A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96AB6F1BEEEE9500E0663A /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4024335E1971B3680025C6A4 /* ReflowLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflowLabelTests.swift; sourceTree = "<group>"; };
 		402433681971B3960025C6A4 /* ReflowingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReflowingLabel.swift; sourceTree = "<group>"; };
 		404426081971C39000A442F7 /* ReflowFragmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReflowFragmentView.swift; sourceTree = "<group>"; };
+		CC96AB6F1BEEEE9500E0663A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = reflowlabel/Utilities.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				4024334B1971B3680025C6A4 /* AppDelegate.swift */,
 				4024334D1971B3680025C6A4 /* ViewController.swift */,
 				402433681971B3960025C6A4 /* ReflowingLabel.swift */,
+				CC96AB6F1BEEEE9500E0663A /* Utilities.swift */,
 				404426081971C39000A442F7 /* ReflowFragmentView.swift */,
 				4024334F1971B3680025C6A4 /* Main.storyboard */,
 				402433521971B3680025C6A4 /* Images.xcassets */,
@@ -161,7 +164,7 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Adlai Holler";
 				TargetAttributes = {
 					402433451971B3680025C6A4 = {
@@ -219,6 +222,7 @@
 				4024334E1971B3680025C6A4 /* ViewController.swift in Sources */,
 				404426091971C39000A442F7 /* ReflowFragmentView.swift in Sources */,
 				4024334C1971B3680025C6A4 /* AppDelegate.swift in Sources */,
+				CC96AB701BEEEE9500E0663A /* Utilities.swift in Sources */,
 				402433691971B3960025C6A4 /* ReflowingLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +277,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -340,6 +345,7 @@
 				INFOPLIST_FILE = ReflowLabel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adly.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -352,6 +358,7 @@
 				INFOPLIST_FILE = ReflowLabel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adly.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -370,6 +377,7 @@
 				);
 				INFOPLIST_FILE = ReflowLabelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adly.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -385,6 +393,7 @@
 				);
 				INFOPLIST_FILE = ReflowLabelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adly.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

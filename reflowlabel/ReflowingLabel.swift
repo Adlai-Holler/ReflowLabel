@@ -45,8 +45,10 @@ class ReflowLabel : UIView {
 
     func displayLinkFired(displayLink: CADisplayLink) {
         let presLayer = layer.presentationLayer() as! CALayer
-        _updateFragPositions(CGRectIntegral(presLayer.bounds), animated: true)
+        updateFragPositions(CGRectIntegral(presLayer.bounds), animated: true)
     }
+    
+    private static let tokenRegex = try! NSRegularExpression(pattern: "[\\S]+", options: [])
     
     // should call automatically – observe label.text somehow
     func _recreateFrags() {
@@ -56,37 +58,33 @@ class ReflowLabel : UIView {
         }
         wordViews.removeAll(keepCapacity: true)
         let attributedStr = label.attributedText!
-        let str: CFString = label.text!
-        
-        let tokenizer = CFStringTokenizerCreate(nil, str, CFRangeMake(0, CFStringGetLength(str)), CFOptionFlags(kCFStringTokenizerUnitWordBoundary), CFLocaleCopyCurrent())
-        for var next = CFStringTokenizerAdvanceToNextToken(tokenizer);
-            next != .None;
-            next = CFStringTokenizerAdvanceToNextToken(tokenizer) {
-            let range = CFStringTokenizerGetCurrentTokenRange(tokenizer)
-            let nsrange = NSMakeRange(range.location, range.length)
-            let attributedText = attributedStr.attributedSubstringFromRange(nsrange)
-            if attributedText.string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).isEmpty {
-                continue
-            }
-            var frame = boundingRect(nsrange, bounds: bounds)
-
-            frame = fragFrameFromGlyphsFrame(frame)
+        let str2 = label.text!
+        let range = str2.nsRangeFromRange(str2.startIndex..<str2.endIndex)
+        let bounds = self.bounds
+        ReflowLabel.tokenRegex.enumerateMatchesInString(str2, options: [], range: range) { result, _, _ in
+            guard let result = result else { return }
+            let nsRange = result.range
+            let attributedText = attributedStr.attributedSubstringFromRange(nsRange)
+            var frame = self.boundingRect(nsRange, bounds: bounds)
+            
+            frame = self.fragFrameFromGlyphsFrame(frame)
             let label = ReflowFragmentView(frame: frame)
-            label.characterRange = nsrange
+            label.characterRange = nsRange
             label.attributedText = attributedText
-            addSubview(label)
-            wordViews.append(label)
+            self.addSubview(label)
+            self.wordViews.append(label)
         }
+
         textFragsCameFrom = attributedStr
     }
     
-    func fragFrameFromGlyphsFrame(glyphsFrame: CGRect) -> CGRect {
+    private func fragFrameFromGlyphsFrame(glyphsFrame: CGRect) -> CGRect {
         var result = glyphsFrame
         result.size.width += 1
         return result.integral
     }
     
-    func _updateFragPositions(bounds: CGRect, animated: Bool) {
+    private func updateFragPositions(bounds: CGRect, animated: Bool) {
         if bounds == boundsWhenLastUpdatedFragPositions { return }
         boundsWhenLastUpdatedFragPositions = bounds
         textContainer.size = bounds.size
@@ -148,9 +146,9 @@ class ReflowLabel : UIView {
         }
     }
     
-    func boundingRect(characterRange: NSRange, bounds: CGRect) -> CGRect {
+    private func boundingRect(characterRange: NSRange, bounds: CGRect) -> CGRect {
         // get y padding
-        var glyphRange: NSRange = NSMakeRange(0, 0)
+        var glyphRange = NSMakeRange(0, 0)
         layoutManager.characterRangeForGlyphRange(characterRange, actualGlyphRange: &glyphRange)
         return layoutManager.boundingRectForGlyphRange(glyphRange, inTextContainer: textContainer)
     }
